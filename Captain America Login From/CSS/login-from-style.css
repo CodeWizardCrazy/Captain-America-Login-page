@@ -1,0 +1,232 @@
+/* Captain America Login Page Css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+:root {
+    --butt: #001eff;
+    --butt_hover: #2121cd;
+    --butt_click: #1d1db3;
+
+
+
+    --bor: #0000fe36;
+    --bor_hover: #0000ff67;
+    --bor_focus: #0000d4;
+
+
+}
+
+::selection {
+    color: #fff;
+    background-color: #4017ba;
+}
+
+.loader-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #09082f;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: dis 4s linear 1 forwards;
+    animation-delay: 1s;
+
+}
+
+@keyframes dis {
+    from {
+        z-index: 3;
+
+    }
+
+    to {
+        z-index: -3;
+
+    }
+}
+
+.cap_sild {
+    height: 421px;
+    width: 421px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: loader linear 4s .50s 1 forwards;
+    transition: all 0.15s;
+}
+
+@keyframes loader {
+    from {
+        box-shadow: 0px 0px 0px 2px #09082f, 0px 0px 0px 10px #fff;
+
+    }
+
+    to {
+        box-shadow: 0px 0px 0px 20px #09082f, 0px 0px 0px 700px #ffffff27;
+
+    }
+}
+
+.loader-div .cap_sild img {
+    height: 500px;
+    filter: saturate(3.5);
+
+}
+
+.mine-div {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    z-index: 1;
+}
+
+.center-div {
+    z-index: 1;
+    height: 510px;
+    width: 450px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px 0px #00000033, 0px 6px 20px 0px #00000030;
+    animation: zomeout 2s ease-out forwards infinite;
+    border-radius: 10px;
+    transition: all 0.15s;
+}
+
+@keyframes zoomout {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+
+    }
+}
+
+#from h2 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 50px 10% 5%;
+}
+
+#from .email {
+    padding: 2% 10%;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#from .pass {
+    padding: 2% 10%;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    position: relative;
+    left: 10%;
+    font-size: 18px;
+    padding: 3% 28.5%;
+    margin-top: 4%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--butt);
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: var(--butt_hover);
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: var(--butt_click);
+}
+
+#from input {
+    font-size: 17px;
+    height: 45px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border: 2px solid var(--bor);
+    padding-left: 8px;
+    position: relative;
+    left: 10%;
+    border-radius: 5px;
+    transition: all 0.20s ease-in;
+}
+
+#from input:hover {
+
+    border: 2px solid var(--bor_hover);
+
+}
+
+#from input:focus {
+    height: 50px;
+    border: 2px solid var(--bor_focus);
+
+}
+
+#from hr {
+    display: block;
+    width: 80%;
+    position: relative;
+    top: 30px;
+    left: 10%;
+
+}
+
+.icons {
+    height: 50px;
+    width: 15%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    transform: scale(1.4);
+    position: fixed;
+    left: 32.6%;
+
+}
+
+.icons img {
+    height: 25px;
+    cursor: pointer;
+    filter: invert(10%) sepia(100%) saturate(4740%) hue-rotate(239deg) brightness(98%) contrast(95%);
+    opacity: 100%;
+    transition: all 0.28s;
+    margin: 10px;
+    z-index: 2;
+    opacity: 50%;
+}
+
+.icons img:hover {
+    opacity: 80%;
+    transform: rotate(-360deg);
+
+}
+
+.icons img:active {
+    box-shadow: 0px 0px 0px 10px #262626, 0px 0px 0px 20px #35353584;
+    opacity: 80%;
+    border-radius: 50%;
+
+}
